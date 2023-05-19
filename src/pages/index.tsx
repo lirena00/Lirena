@@ -16,7 +16,7 @@ const Home: NextPage = () => {
         
         <div className="container flex flex-col w-full lg:w-3/4  gap-12 px-4 py-8 border-2">
         <p className="text-3xl font-bold tracking-tight inline text-white">
-        Hi, I'm
+        Hi, I`&apos;`m
         <span className="inline text-[hsl(280,100%,70%)]">
           <Typewriter
             options={{
@@ -29,7 +29,7 @@ const Home: NextPage = () => {
         </p>
 
         <p className=" text-gray-400 tracking-tighter font-semibold text-lg">       
-        I'm an 18-year-old developer from India with a strong command of Python, TypeScript, JavaScript and some C++. 
+        I`&apos;`m an 18-year-old developer from India with a strong command of Python, TypeScript, JavaScript and some C++. 
         <br></br>
         <br></br>
         I started
