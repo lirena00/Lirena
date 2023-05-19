@@ -16,7 +16,7 @@ const Home: NextPage = () => {
         
         <div className="container flex flex-col w-full lg:w-3/4  gap-12 px-4 py-8 border-2">
         <p className="text-3xl font-bold tracking-tight inline text-white">
-        Hi, I`&apos;`m
+        Hi, I&apos;m
         <span className="inline text-[hsl(280,100%,70%)]">
           <Typewriter
             options={{
@@ -29,7 +29,7 @@ const Home: NextPage = () => {
         </p>
 
         <p className=" text-gray-400 tracking-tighter font-semibold text-lg">       
-        I`&apos;`m an 18-year-old developer from India with a strong command of Python, TypeScript, JavaScript and some C++. 
+        I&apos;m an 18-year-old developer from India with a strong command of Python, TypeScript, JavaScript and some C++. 
         <br></br>
         <br></br>
         I started
@@ -50,7 +50,7 @@ const Home: NextPage = () => {
         <Image className="w-full object-cover" src="/aniray.jpg" alt="Project Banner" width={1000} height={1000}/>
         <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">Aniray</div>
-        <p className="text-gray-400 text-base">
+        <p className="text-gray-400 text-base w-full">
         Aniray is an anime streaming site which I used to get into Next.js and Tailwind CSS. It also focuses on the scraping
         of anime from various sources and displaying them in a clean and easy to use interface.
         </p>
@@ -64,7 +64,7 @@ const Home: NextPage = () => {
         <Image className="w-full object-cover" src="/clover.jpg" alt="Project Banner" width={1000} height={1000}/>
         <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">Clover Bot</div>
-        <p className="text-gray-400 text-base">
+        <p className="text-gray-400 text-base w-full">
         Clover is a Discord bot which I made to learn more about Python and Discord.py and Database. It had a lot of
         features, including a leveling system, a currency system, and a lot more. It also had several api integrations.
         </p>
