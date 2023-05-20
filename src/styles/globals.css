@@ -24,3 +24,15 @@
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.125);
 }
+
+.blob {
+    filter: blur(40px);
+    position: absolute;
+    z-index: -1; /* to keep it at below everything else */
+    top: 0; /* to align it at top */
+    left: 0; /* to align it at left */
+    width: 250px;
+    height: 250px;
+    border-radius: 50%; /* to make it circular */
+    background: rgb(255, 255, 255, 0.5);
+  }
