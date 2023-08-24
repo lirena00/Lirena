@@ -106,12 +106,12 @@ const Home: NextPage = ()=>{
 
         <Link href="https://aishiteru.lirena.xyz" target="_blank">
         <div className=" rounded overflow-hidden transform hover:scale-95 duration-100  card text-white">
-        <Image className="w-full object-cover" src="/manga_miner.jpg" alt="Project Banner" width={1000} height={1000}/>
+        <Image className="w-full object-cover" src="/aishiteru.jpg" alt="Project Banner" width={1000} height={1000}/>
         <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">Aishiteru</div>
         <p className="text-gray-400 text-base w-full ">
         A rewrite and a better next.js version of one of the first project with same name. This was built with T3 stack and
-        uses TS. It's like Tiktok but for waifu lovers. It has endless scroll of Waifu Images.
+        uses TS. It&apos;s like Tiktok but for waifu lovers. It has endless scroll of Waifu Images.
         </p>
         </div>
         </div>
@@ -132,7 +132,7 @@ const Home: NextPage = ()=>{
 
         <Link href="" target="_blank">
         <div className=" rounded overflow-hidden transform hover:scale-95 duration-100  card text-white">
-        <Image className="w-full object-cover" src="/manga_miner.jpg" alt="Project Banner" width={1000} height={1000}/>
+        <Image className="w-full object-cover" src="/siesta.jpg" alt="Project Banner" width={1000} height={1000}/>
         <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">Siesta</div>
         <p className="text-gray-400 text-base w-full ">
