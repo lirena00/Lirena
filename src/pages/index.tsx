@@ -16,9 +16,9 @@ const Home: NextPage = ()=>{
       </Head>
       <main className="flex p-5 min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#000] to-[#15162c]">
         
-        <div className="container flex flex-col w-full lg:w-3/4  gap-8 px-2 py-8">
+        <div className="container flex flex-col w-full lg:w-3/4  gap-5 px-2 py-8">
 
-        <p className="text-3xl font-bold tracking-tight inline text-white">
+        <p className="text-3xl font-semibold tracking-tight inline text-white">
   Hi, I&apos;m{' '}
   <span className="inline text-[hsl(280,100%,70%)]">
     <Typewriter
@@ -34,17 +34,18 @@ const Home: NextPage = ()=>{
 
         <p className=" text-gray-400 tracking-tighter font-semibold text-lg">       
         I&apos;m an 18-year-old developer from India with a strong command of Python, TypeScript, JavaScript and some C++. 
-        <br></br>
+ 
         <br></br>
         I started
         my journey in the world of programming seriously in 2018, and since then I have been learning and developing my skills.
         I am currently working on a few projects, including a Discord bot, a website, and a few other things.
+      
         <br></br>
-        <br></br>
-        In free time I like drawing, writing, and immersing myself in the world of anime and manga.
+        In free time I like drawing, writing, and immersing myself in the world of anime and manga and for some reasons
+        almost every project of mine revovles around anime and manga.
         </p>
         
-        <p className="text-3xl font-bold  text-white">
+        <p className="text-3xl font-semibold  text-white">
         Projects
         </p>
      
@@ -91,19 +92,6 @@ const Home: NextPage = ()=>{
         </div>
         </Link>
 
-        <Link href="https://github.com/LiReNa00/Manga-Miner" target="_blank">
-        <div className=" rounded overflow-hidden transform hover:scale-95 duration-100  card text-white">
-        <Image className="w-full object-cover" src="/manga_miner.jpg" alt="Project Banner" width={1000} height={1000}/>
-        <div className="px-6 py-4">
-        <div className="font-bold text-xl mb-2">Manga Miner</div>
-        <p className="text-gray-400 text-base w-full ">
-        This was one of the first project that I built for scraping manga from various sources. It was built using Python and BeautifulSoup.
-        This also had a feature to download the manga in the form of a pdf.
-        </p>
-        </div>
-        </div>
-        </Link>
-
         <Link href="https://aishiteru.lirena.xyz" target="_blank">
         <div className=" rounded overflow-hidden transform hover:scale-95 duration-100  card text-white">
         <Image className="w-full object-cover" src="/aishiteru.jpg" alt="Project Banner" width={1000} height={1000}/>
@@ -117,9 +105,9 @@ const Home: NextPage = ()=>{
         </div>
         </Link>
 
-        <Link href="" target="_blank">
+        <Link href="" >
         <div className=" rounded overflow-hidden transform hover:scale-95 duration-100  card text-white">
-        <Image className="w-full object-cover" src="/manga_miner.jpg" alt="Project Banner" width={1000} height={1000}/>
+        <Image className="w-full object-cover" src="/tepi.jpg" alt="Project Banner" width={1000} height={1000}/>
         <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">Tepi</div>
         <p className="text-gray-400 text-base w-full ">
@@ -130,7 +118,7 @@ const Home: NextPage = ()=>{
         </div>
         </Link>
 
-        <Link href="" target="_blank">
+        <Link href="">
         <div className=" rounded overflow-hidden transform hover:scale-95 duration-100  card text-white">
         <Image className="w-full object-cover" src="/siesta.jpg" alt="Project Banner" width={1000} height={1000}/>
         <div className="px-6 py-4">
@@ -143,13 +131,26 @@ const Home: NextPage = ()=>{
         </div>
         </Link>
 
-        <Link href="" target="_blank">
+        <Link href="https://github.com/LiReNa00/Manga-Miner" target="_blank">
         <div className=" rounded overflow-hidden transform hover:scale-95 duration-100  card text-white">
         <Image className="w-full object-cover" src="/manga_miner.jpg" alt="Project Banner" width={1000} height={1000}/>
         <div className="px-6 py-4">
+        <div className="font-bold text-xl mb-2">Manga Miner</div>
+        <p className="text-gray-400 text-base w-full ">
+        This was one of the first project that I built for scraping manga from various sources. It was built using Python and BeautifulSoup.
+        This also had a feature to download the manga in the form of a pdf.
+        </p>
+        </div>
+        </div>
+        </Link>
+
+        <Link href="" >
+        <div className=" rounded overflow-hidden transform hover:scale-95 duration-100  card text-white">
+        <Image className="w-full object-cover" src="/dash.jpg" alt="Project Banner" width={1000} height={1000}/>
+        <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">Dash</div>
         <p className="text-gray-400 text-base w-full ">
-        A in development homepage for my browser which is built using Next.js and Tailwind CSS. With features like
+        An in development homepage for my browser which is built using Next.js and Tailwind CSS. With features like
         quicklinks, weather and in development features like todo list and more.
         </p>
         </div>
@@ -161,8 +162,8 @@ const Home: NextPage = ()=>{
 
         </div>
 
- <div className="">
-  find me at
+ <div className="text-gray-500">
+  Find Me At
  </div>
         
       </main>
