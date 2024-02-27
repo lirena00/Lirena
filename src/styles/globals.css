@@ -36,3 +36,10 @@
     border-radius: 50%; /* to make it circular */
     background: rgb(255, 255, 255, 0.5);
   }
+
+.gradient-text {
+    background: #CC66FF;
+background: repeating-linear-gradient(to top left, #CC66FF 0%, #60A5FA 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
