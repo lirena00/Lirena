@@ -54,7 +54,7 @@ const Home: NextPage = ()=>{
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 justify-center items-center">
 
         <Link href="https://aniray.lirena.xyz" target="_blank" >
-        <div className=" rounded overflow-hidden transform hover:scale-95 duration-100 card text-white w-full">
+        <div className=" rounded overflow-hidden transform hover:scale-[0.98] duration-300 card text-white w-full">
         <Image className="w-full object-cover" src="/aniray_banner.jpg" alt="Project Banner" width={1000} height={1000}/>
         <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">Aniray</div>
@@ -69,7 +69,7 @@ const Home: NextPage = ()=>{
 
 
         <Link href="https://top.gg/bot/855532494035484743" target="_blank">
-        <div className=" rounded overflow-hidden transform hover:scale-95 duration-100  card text-white">
+        <div className=" rounded overflow-hidden transform hover:scale-[0.98] duration-300  card text-white">
         <Image className="w-full object-cover" src="/clover.jpg" alt="Project Banner" width={1000} height={1000}/>
         <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">Clover Bot</div>
@@ -82,7 +82,7 @@ const Home: NextPage = ()=>{
         </Link>
 
         <Link href="https://story.lirena.xyz" target="_blank">
-        <div className=" rounded overflow-hidden transform hover:scale-95 duration-100  card text-white h-full">
+        <div className=" rounded overflow-hidden transform hover:scale-[0.98] duration-300  card text-white h-full">
         <Image className="w-full object-cover" src="/story.jpg" alt="Project Banner" width={1000} height={1000}/>
         <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">Story</div>
@@ -95,7 +95,7 @@ const Home: NextPage = ()=>{
         </Link>
 
         <Link href="https://aishiteru.lirena.xyz" target="_blank">
-        <div className=" rounded overflow-hidden transform hover:scale-95 duration-100  card text-white">
+        <div className=" rounded overflow-hidden transform hover:scale-[0.98] duration-300  card text-white">
         <Image className="w-full object-cover" src="/aishiteru.jpg" alt="Project Banner" width={1000} height={1000}/>
         <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">Aishiteru</div>
@@ -108,7 +108,7 @@ const Home: NextPage = ()=>{
         </Link>
 
         <Link href="" >
-        <div className=" rounded overflow-hidden transform hover:scale-95 duration-100  card text-white">
+        <div className=" rounded overflow-hidden transform hover:scale-[0.98] duration-300  card text-white">
         <Image className="w-full object-cover" src="/tepi.jpg" alt="Project Banner" width={1000} height={1000}/>
         <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">Tepi</div>
@@ -121,7 +121,7 @@ const Home: NextPage = ()=>{
         </Link>
 
         <Link href="">
-        <div className=" rounded overflow-hidden transform hover:scale-95 duration-100  card text-white">
+        <div className=" rounded overflow-hidden transform hover:scale-[0.98] duration-300  card text-white">
         <Image className="w-full object-cover" src="/siesta.jpg" alt="Project Banner" width={1000} height={1000}/>
         <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">Siesta</div>
@@ -134,7 +134,7 @@ const Home: NextPage = ()=>{
         </Link>
 
         <Link href="https://github.com/LiReNa00/Manga-Miner" target="_blank">
-        <div className=" rounded overflow-hidden transform hover:scale-95 duration-100  card text-white">
+        <div className=" rounded overflow-hidden transform hover:scale-[0.98] duration-300  card text-white">
         <Image className="w-full object-cover" src="/manga_miner.jpg" alt="Project Banner" width={1000} height={1000}/>
         <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">Manga Miner</div>
@@ -147,7 +147,7 @@ const Home: NextPage = ()=>{
         </Link>
 
         <Link href="" >
-        <div className=" rounded overflow-hidden transform hover:scale-95 duration-100  card text-white">
+        <div className=" rounded overflow-hidden transform hover:scale-[0.98] duration-300  card text-white">
         <Image className="w-full object-cover" src="/dash.jpg" alt="Project Banner" width={1000} height={1000}/>
         <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">Dash</div>
