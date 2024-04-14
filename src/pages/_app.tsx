@@ -6,7 +6,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
   return (
     <>
     <Head>
-    <script defer src="https://analytics.lirena.xyz/script.js" data-website-id="7d9f0467-9f61-4fb1-ac4f-6d712106dec5"></script>
+    <script defer src="https://analytics-eta-green.vercel.app/script.js" data-website-id="7d9f0467-9f61-4fb1-ac4f-6d712106dec5"></script>
     </Head>
       <Component {...pageProps} />
 
