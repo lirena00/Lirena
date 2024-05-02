@@ -15,7 +15,7 @@ interface Project {
 
 const projects: Project[] = [
   {
-    href: "https://aniray.lirena.xyz",
+    href: "https://aniray.lirena.in",
     imageSrc: "/aniray_banner.jpg",
     title: "Aniray",
     description: "Aniray is an anime streaming site which I used to get into Next.js and Tailwind CSS. It also focuses on the scraping of anime from various sources and displaying them in a clean and easy to use interface."
@@ -27,13 +27,13 @@ const projects: Project[] = [
     description: "Clover is a Discord bot which I made to learn more about Python and Discord.py and Database. It had a lot of features, including a leveling system, a currency system, and a lot more. It also had several api integrations."
   },
   {
-    href: "https://story.lirena.xyz",
+    href: "https://story.lirena.in",
     imageSrc: "/story.jpg",
     title: "Story",
     description: "This is a website which I made to explore more about libraries like contentlayer and tailwindcss This also have a collection of several of the stories which I have written as the part of my hobby."
   },
   {
-    href: "https://aishiteru.lirena.xyz",
+    href: "https://aishiteru.lirena.in",
     imageSrc: "/aishiteru.jpg",
     title: "Aishiteru",
     description: "A rewrite and a better next.js version of one of the first project with same name. This was built with T3 stack and uses TS. It's like Tiktok but for waifu lovers. It has endless scroll of Waifu Images."
@@ -57,7 +57,7 @@ const projects: Project[] = [
     description: "This was one of the first project that I built for scraping manga from various sources. It was built using Python and BeautifulSoup. This also had a feature to download the manga in the form of a pdf."
   },
   {
-    href: "https://newsense.lirena.xyz",
+    href: "https://newsense.lirena.in",
     imageSrc: "/newsense.jpg",
     title: "Newsense",
     description:"Newsense is a news aggregator website built using Next.js and Tailwind CSS which focuses on saving your time by using power of AI to summarize the articles in points."
