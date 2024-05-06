@@ -15,6 +15,12 @@ interface Project {
 
 const projects: Project[] = [
   {
+    href: "https://animood.lirena.in",
+    imageSrc: "/animood_banner.jpg",
+    title: "Animood",
+    description: "Animood is an platform which suggest you anime based on your mood. It uses AI to recognise best genre and tag that would fit your mood. Other than that it also have history and overall animelist recommendation."
+  },
+  {
     href: "https://aniray.lirena.in",
     imageSrc: "/aniray_banner.jpg",
     title: "Aniray",
@@ -119,7 +125,7 @@ const Home: NextPage = ()=>{
 
 
         <p className=" text-gray-400 tracking-tighter font-semibold text-lg">       
-        I&apos;m an 18-year-old student developer with a strong command of Python, TypeScript, JavaScript and some C++. 
+        I&apos;m an 19-year-old student developer with a strong command of Python, TypeScript, JavaScript and some C++. 
  
         <br></br>
         I started
