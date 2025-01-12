@@ -3,6 +3,8 @@ import Head from "next/head";
 import Typewriter from "typewriter-effect";
 import Link from "next/link";
 import Image from "next/image";
+import { projects } from "~/utils/project";
+import { useScramble } from "use-scramble";
 
 interface Project {
   href: string;
@@ -10,94 +12,6 @@ interface Project {
   title: string;
   description: string;
 }
-
-const projects: Project[] = [
-  {
-    href: "https://odash.lirena.in",
-    imageSrc: "/odash_banner.jpg",
-    title: "Odash",
-    description:
-      "Odash is a highly customizable new tab page designed to maximize personalization. Arrange widgets, links, and tools freely to create the perfect browser dashboard for your workflow and preferences.",
-  },
-  {
-    href: "https://animood.lirena.in",
-    imageSrc: "/animood_banner.jpg",
-    title: "Animood",
-    description:
-      "Animood is an AI-powered anime recommendation platform that suggests anime based on your mood. Featuring genre-specific recommendations, history tracking, and personalized anime lists, it’s perfect for anime enthusiasts.",
-  },
-  {
-    href: "https://aniray.lirena.in",
-    imageSrc: "/aniray_banner.jpg",
-    title: "Aniray",
-    description:
-      "Aniray is an anime streaming platform built with Next.js and Tailwind CSS. It offers a seamless interface and scrapes anime from various sources, making it easy to discover and stream your favorite shows.",
-  },
-  {
-    href: "https://top.gg/bot/855532494035484743",
-    imageSrc: "/clover.jpg",
-    title: "Clover Bot",
-    description:
-      "Clover is a feature-packed Discord bot built using Python, Discord.py, and databases. It includes a leveling system, currency features, and multiple API integrations for enhanced server functionality.",
-  },
-  {
-    href: "https://story.lirena.in",
-    imageSrc: "/story.jpg",
-    title: "Story",
-    description:
-      "A storytelling website created with Contentlayer and Tailwind CSS. It showcases a collection of original stories written as a hobby, while exploring the capabilities of modern web development tools.",
-  },
-  {
-    href: "https://aishiteru.lirena.in",
-    imageSrc: "/aishiteru.jpg",
-    title: "Aishiteru",
-    description:
-      "Aishiteru is a Next.js project built with the T3 stack, offering an endless scroll of waifu images. It’s a refined version of an earlier project and combines TypeScript with innovative features inspired by TikTok for anime lovers.",
-  },
-  {
-    href: "#",
-    imageSrc: "/tepi.jpg",
-    title: "Tepi",
-    description:
-      "Tepi is a multipurpose private API built with FastAPI and Python. It powers image generation and serves several websites like Aniray and Story, offering versatile endpoints for custom image creation.",
-  },
-  {
-    href: "#",
-    imageSrc: "/siesta.jpg",
-    title: "Siesta",
-    description:
-      "Siesta is a private music-focused Discord bot built using the same framework as Clover. It specializes in high-quality music playback and features tailored for specific servers.",
-  },
-  {
-    href: "https://github.com/LiReNa00/Manga-Miner",
-    imageSrc: "/manga_miner.jpg",
-    title: "Manga Miner",
-    description:
-      "Manga Miner is a Python-based manga scraping tool built with BeautifulSoup. It enables users to scrape and download manga from multiple sources, offering the option to save manga as PDFs.",
-  },
-  {
-    href: "https://newsense.lirena.in",
-    imageSrc: "/newsense.jpg",
-    title: "Newsense",
-    description:
-      "Newsense is a Next.js-powered news aggregator that uses AI to summarize articles into concise points. Save time while staying informed with this efficient and user-friendly platform.",
-  },
-  {
-    href: "#",
-    imageSrc: "/portfolio.jpg",
-    title: "Portfolio",
-    description:
-      "This portfolio website, built with Next.js and Tailwind CSS, showcases major projects, skills, and achievements. Discover my journey as a developer and explore the technologies I use.",
-  },
-  {
-    href: "#",
-    imageSrc: "/dash.jpg",
-    title: "Dash",
-    description:
-      "Dash is an in-development homepage for browsers, featuring quick links, weather updates, and to-do lists. Built with Next.js and Tailwind CSS, it’s designed for productivity and convenience.",
-  },
-];
-
 const ProjectCard: React.FC<Project> = ({
   href,
   imageSrc,
@@ -122,6 +36,14 @@ const ProjectCard: React.FC<Project> = ({
 );
 
 const Home: NextPage = () => {
+  const { ref } = useScramble({
+    text: "Saksham Kushwaha",
+    speed: 0.6,
+    tick: 1,
+    step: 1,
+    scramble: 4,
+    seed: 0,
+  });
   return (
     <>
       <Head>
@@ -133,40 +55,44 @@ const Home: NextPage = () => {
 
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#000] to-[#15162c] p-5">
+      <main className="flex min-h-screen flex-col items-center justify-center bg-background p-5">
         <div className="container flex w-full flex-col gap-5  px-2 py-8 lg:w-3/4">
-          <p className="inline text-3xl font-semibold tracking-tight text-white">
+          <p className="inline text-3xl  tracking-tight text-white">
             Hi, I&apos;m{" "}
-            <span className="inline text-[#cc66ff] ">
-              <Typewriter
-                options={{
-                  strings: ["Lirena", "Saksham Kushwaha"],
-                  autoStart: true,
-                  loop: true,
-                }}
-              />
+            <span className="inline font-bold text-accent ">
+              <p ref={ref} />
             </span>
           </p>
-          <p className="text-lg font-semibold tracking-tighter text-gray-400">
-            I&apos;m a 19-year-old developer specializing in Python, TypeScript,
-            JavaScript, and C++, with a passion for creating innovative web
-            applications.
-            <br></br>I began my programming journey in 2018 and have been honing
-            my skills through impactful open-source projects, including
-            anime-inspired tools and open-source contributions .<br></br>In my
-            free time, I enjoy drawing, creative writing, and immersing myself
-            in the worlds of anime and manga, which often serve as inspiration
-            for my projects.
+          <p className="text-lg font-medium leading-relaxed tracking-tighter text-text">
+            I&apos;m a 19-year-old developer specializing in{" "}
+            <span className=" text-accent">Python</span>,{" "}
+            <span className=" text-accent">TypeScript</span>,{" "}
+            <span className=" text-accent">JavaScript</span>, and{" "}
+            <span className=" text-accent">C++</span>, with a passion for
+            creating innovative web applications. I began my programming journey
+            in <span className="text-accent">2018</span> and have honed my
+            skills through impactful open-source projects, including
+            anime-inspired tools and contributions. In my free time, I enjoy{" "}
+            <span className="text-accent">drawing</span>,{" "}
+            <span className="text-accent">creative writing</span>, and immersing
+            myself in the worlds of <span className="text-accent">anime</span>{" "}
+            and <span className="text-accent">manga</span>, which often serve as
+            inspiration for my projects.
           </p>
 
-          <p className="text-3xl font-semibold  text-white">Projects</p>
+          <p className="text-3xl font-semibold  text-white">
+            {" "}
+            <span className="text-accent">* </span>Projects
+          </p>
 
           <div className="grid grid-cols-1 items-center justify-center gap-4 sm:grid-cols-2">
             {projects.map((project, index) => (
               <ProjectCard {...project} key={index} />
             ))}
           </div>
-          <p className="text-3xl font-semibold  text-white">Tech Stack</p>
+          <p className="text-3xl font-semibold  text-white">
+            <span className="text-accent">* </span>Tech Stack
+          </p>
 
           <div className="mb-10 grid   grid-cols-3 gap-2 md:flex md:flex-wrap">
             <div className="group flex h-fit w-fit items-center rounded-lg bg-gradient-to-t  from-yellow-300/40  from-5% to-gray-800  to-100% p-2">
