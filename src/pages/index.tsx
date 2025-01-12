@@ -125,8 +125,12 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Lirena</title>
-        <meta name="description" content="Lirena" />
+        <title>Saksham Kushwaha | lirena00 | Portfolio</title>
+        <meta
+          name="description"
+          content="Saksham Kushwaha (lirena00), a 19-year-old CS undergrad, is a full-stack developer, programmer, and artist passionate about AI, web development, and creative storytelling. A weeb at heart, I enjoy reading manga, watching anime, and working on my own post-apocalyptic story, soon to be published. Explore projects like Odash, Animood, open-source contributions, and unique anime-inspired tools."
+        />
+
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#000] to-[#15162c] p-5">
