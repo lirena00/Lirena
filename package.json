@@ -16,6 +16,7 @@
     "react-tsparticles": "^2.9.3",
     "tsparticles": "^2.9.3",
     "typewriter-effect": "^2.19.0",
+    "use-scramble": "^2.2.15",
     "zod": "^3.21.4"
   },
   "devDependencies": {
