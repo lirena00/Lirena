@@ -17,84 +17,84 @@ const projects: Project[] = [
     imageSrc: "/odash_banner.jpg",
     title: "Odash",
     description:
-      "Odash is widget based new tab page which allows you to place items wherever you want and however you want to maximize the personalization one can get.",
+      "Odash is a highly customizable new tab page designed to maximize personalization. Arrange widgets, links, and tools freely to create the perfect browser dashboard for your workflow and preferences.",
   },
   {
     href: "https://animood.lirena.in",
     imageSrc: "/animood_banner.jpg",
     title: "Animood",
     description:
-      "Animood is an platform which suggest you anime based on your mood. It uses AI to recognise best genre and tag that would fit your mood. Other than that it also have history and overall animelist recommendation.",
+      "Animood is an AI-powered anime recommendation platform that suggests anime based on your mood. Featuring genre-specific recommendations, history tracking, and personalized anime lists, it’s perfect for anime enthusiasts.",
   },
   {
     href: "https://aniray.lirena.in",
     imageSrc: "/aniray_banner.jpg",
     title: "Aniray",
     description:
-      "Aniray is an anime streaming site which I used to get into Next.js and Tailwind CSS. It also focuses on the scraping of anime from various sources and displaying them in a clean and easy to use interface.",
+      "Aniray is an anime streaming platform built with Next.js and Tailwind CSS. It offers a seamless interface and scrapes anime from various sources, making it easy to discover and stream your favorite shows.",
   },
   {
     href: "https://top.gg/bot/855532494035484743",
     imageSrc: "/clover.jpg",
     title: "Clover Bot",
     description:
-      "Clover is a Discord bot which I made to learn more about Python and Discord.py and Database. It had a lot of features, including a leveling system, a currency system, and a lot more. It also had several api integrations.",
+      "Clover is a feature-packed Discord bot built using Python, Discord.py, and databases. It includes a leveling system, currency features, and multiple API integrations for enhanced server functionality.",
   },
   {
     href: "https://story.lirena.in",
     imageSrc: "/story.jpg",
     title: "Story",
     description:
-      "This is a website which I made to explore more about libraries like contentlayer and tailwindcss This also have a collection of several of the stories which I have written as the part of my hobby.",
+      "A storytelling website created with Contentlayer and Tailwind CSS. It showcases a collection of original stories written as a hobby, while exploring the capabilities of modern web development tools.",
   },
   {
     href: "https://aishiteru.lirena.in",
     imageSrc: "/aishiteru.jpg",
     title: "Aishiteru",
     description:
-      "A rewrite and a better next.js version of one of the first project with same name. This was built with T3 stack and uses TS. It's like Tiktok but for waifu lovers. It has endless scroll of Waifu Images.",
+      "Aishiteru is a Next.js project built with the T3 stack, offering an endless scroll of waifu images. It’s a refined version of an earlier project and combines TypeScript with innovative features inspired by TikTok for anime lovers.",
   },
   {
     href: "#",
     imageSrc: "/tepi.jpg",
     title: "Tepi",
     description:
-      "A multipurpose private api used in several sites of mine for example Aniray and Story. It is built using flask and Python Mostly it serves as an image generation api which have several endpoints for different types of images.",
+      "Tepi is a multipurpose private API built with FastAPI and Python. It powers image generation and serves several websites like Aniray and Story, offering versatile endpoints for custom image creation.",
   },
   {
     href: "#",
     imageSrc: "/siesta.jpg",
     title: "Siesta",
     description:
-      "A priavte music discord bot only for some servers which is not discontinued. It was built on the same framework as Clover, but it was more focused on music and had a lot of features related to music.",
+      "Siesta is a private music-focused Discord bot built using the same framework as Clover. It specializes in high-quality music playback and features tailored for specific servers.",
   },
   {
     href: "https://github.com/LiReNa00/Manga-Miner",
     imageSrc: "/manga_miner.jpg",
     title: "Manga Miner",
     description:
-      "This was one of the first project that I built for scraping manga from various sources. It was built using Python and BeautifulSoup. This also had a feature to download the manga in the form of a pdf.",
+      "Manga Miner is a Python-based manga scraping tool built with BeautifulSoup. It enables users to scrape and download manga from multiple sources, offering the option to save manga as PDFs.",
   },
   {
     href: "https://newsense.lirena.in",
     imageSrc: "/newsense.jpg",
     title: "Newsense",
     description:
-      "Newsense is a news aggregator website built using Next.js and Tailwind CSS which focuses on saving your time by using power of AI to summarize the articles in points.",
+      "Newsense is a Next.js-powered news aggregator that uses AI to summarize articles into concise points. Save time while staying informed with this efficient and user-friendly platform.",
   },
   {
     href: "#",
     imageSrc: "/portfolio.jpg",
     title: "Portfolio",
     description:
-      "This site is made using Next.js and Tailwind CSS which serves as portfolio. It showcases all the major projects I have worked on along with techstack and about me.",
+      "This portfolio website, built with Next.js and Tailwind CSS, showcases major projects, skills, and achievements. Discover my journey as a developer and explore the technologies I use.",
   },
   {
     href: "#",
     imageSrc: "/dash.jpg",
     title: "Dash",
     description:
-      "An in development homepage for my browser which is built using Next.js and Tailwind CSS. With features like quicklinks, weather and in development features like todo list and more.",
+      "Dash is an in-development homepage for browsers, featuring quick links, weather updates, and to-do lists. Built with Next.js and Tailwind CSS, it’s designed for productivity and convenience.",
   },
 ];
 
@@ -147,18 +147,16 @@ const Home: NextPage = () => {
               />
             </span>
           </p>
-
-          <p className=" text-lg font-semibold tracking-tighter text-gray-400">
-            I&apos;m an 19-year-old student developer with a strong command of
-            Python, TypeScript, JavaScript and some C++.
-            <br></br>I started my journey in the world of programming seriously
-            in 2018, and since then I have been learning and developing my
-            skills. I am currently working on a few projects, including a
-            Discord bot, a website, and a few other things.
-            <br></br>
-            In free time I like drawing, writing, and immersing myself in the
-            world of anime and manga and for some reasons almost every project
-            of mine revovles around anime and manga.
+          <p className="text-lg font-semibold tracking-tighter text-gray-400">
+            I&apos;m a 19-year-old developer specializing in Python, TypeScript,
+            JavaScript, and C++, with a passion for creating innovative web
+            applications.
+            <br></br>I began my programming journey in 2018 and have been honing
+            my skills through impactful open-source projects, including
+            anime-inspired tools and open-source contributions .<br></br>In my
+            free time, I enjoy drawing, creative writing, and immersing myself
+            in the worlds of anime and manga, which often serve as inspiration
+            for my projects.
           </p>
 
           <p className="text-3xl font-semibold  text-white">Projects</p>
