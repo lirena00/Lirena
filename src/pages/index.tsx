@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { projects } from "~/utils/project";
 import { useScramble } from "use-scramble";
+import { ArrowUpRight, Plus } from "lucide-react";
 
 interface Project {
   href: string;
@@ -12,7 +13,29 @@ interface Project {
   title: string;
   description: string;
 }
+
 const ProjectCard: React.FC<Project> = ({
+  href,
+  imageSrc,
+  title,
+  description,
+}) => (
+  <Link href={href} target="_blank">
+    <div className="group relative z-20 h-full border border-accent/50 transition-all duration-300 hover:scale-105">
+      {/* Adjusted position for the arrow */}
+      <Plus className="absolute left-0 top-0 h-5 w-5 -translate-x-1/2 -translate-y-1/2 text-accent" />
+      <Plus className="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 text-accent" />
+      <div className="place-items-left grid h-full px-6 py-4 lg:h-40">
+        <div className="mb-2 text-left text-xl font-semibold text-accent">
+          {title}
+        </div>
+        <p className="w-full text-base">{description}</p>
+      </div>
+    </div>
+  </Link>
+);
+
+const ProjectCardd: React.FC<Project> = ({
   href,
   imageSrc,
   title,
@@ -55,7 +78,7 @@ const Home: NextPage = () => {
 
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex min-h-screen flex-col items-center justify-center bg-background p-5">
+      <main className="flex min-h-screen flex-col items-center justify-center bg-background p-5 text-text">
         <div className="container flex w-full flex-col gap-5  px-2 py-8 lg:w-3/4">
           <p className="inline text-3xl  tracking-tight text-white">
             Hi, I&apos;m{" "}
@@ -80,7 +103,7 @@ const Home: NextPage = () => {
             inspiration for my projects.
           </p>
 
-          <p className="text-3xl font-semibold  text-white">
+          <p className="text-2xl font-semibold  text-white">
             {" "}
             <span className="text-accent">* </span>Projects
           </p>
@@ -90,7 +113,7 @@ const Home: NextPage = () => {
               <ProjectCard {...project} key={index} />
             ))}
           </div>
-          <p className="text-3xl font-semibold  text-white">
+          <p className="text-2xl font-semibold  text-white">
             <span className="text-accent">* </span>Tech Stack
           </p>
 
