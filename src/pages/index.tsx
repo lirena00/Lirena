@@ -38,11 +38,11 @@ const ProjectCard: React.FC<Project> = ({
 const Home: NextPage = () => {
   const { ref } = useScramble({
     text: "Saksham Kushwaha",
-    speed: 0.6,
+    speed: 0.5,
     tick: 1,
     step: 1,
-    scramble: 4,
-    seed: 0,
+    scramble: 5,
+    seed: 3,
   });
   return (
     <>
