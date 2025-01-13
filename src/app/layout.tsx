@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   icons: [{ rel: "icon", url: "/favicon.jpg" }],
   openGraph: {
     title: "Saksham Kushwaha | lirena00",
-    images: [{ url: "/og.jpg" }],
+    images: [{ url: "/og.png" }],
   },
 };
 
