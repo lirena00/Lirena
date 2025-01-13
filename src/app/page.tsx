@@ -1,11 +1,13 @@
+"use client";
 import { type NextPage } from "next";
 import Head from "next/head";
-import Typewriter from "typewriter-effect";
 import Link from "next/link";
 import Image from "next/image";
 import { projects } from "~/utils/project";
 import { useScramble } from "use-scramble";
 import { ArrowUpRight, Plus } from "lucide-react";
+import { text } from "stream/consumers";
+import { string } from "zod";
 
 interface Project {
   href: string;
@@ -21,9 +23,9 @@ const ProjectCard: React.FC<Project> = ({
   description,
 }) => (
   <Link href={href} target="_blank">
-    <div className="group relative z-20 h-full border border-text/50 transition-all duration-300 hover:scale-105">
+    <div className="border-text/50 group relative z-20 h-full border transition-all duration-300 hover:scale-105">
       <img
-        className="absolute inset-0 h-full w-full object-cover opacity-80 transition-transform duration-300 "
+        className="absolute inset-0 h-full w-full object-cover opacity-80 transition-transform duration-300"
         src={imageSrc}
         alt="Project Banner"
       />
@@ -31,41 +33,18 @@ const ProjectCard: React.FC<Project> = ({
       <div className="absolute inset-0 overflow-hidden bg-black/50 backdrop-blur-3xl" />
 
       <div className="relative z-10 flex h-full flex-col p-4 lg:h-40">
-        <div className="mb-2 text-left text-xl font-semibold text-accent">
+        <div className="text-accent mb-2 text-left text-xl font-semibold">
           {title}
         </div>
         <p className="w-full text-base text-gray-300">{description}</p>
       </div>
 
-      <Plus className="absolute bottom-0 right-0 h-7 w-7 translate-x-1/2 translate-y-1/2 text-accent" />
+      <Plus className="text-accent absolute bottom-0 right-0 h-7 w-7 translate-x-1/2 translate-y-1/2" />
     </div>
   </Link>
 );
 
-const ProjectCardd: React.FC<Project> = ({
-  href,
-  imageSrc,
-  title,
-  description,
-}) => (
-  <Link href={href} target="_blank">
-    <div className="group relative z-20 h-full overflow-hidden rounded-xl text-white">
-      <Image
-        className="absolute -z-10 h-full w-full transform object-cover duration-300 group-hover:scale-110"
-        src={imageSrc}
-        alt="Project Banner"
-        width={1000}
-        height={1000}
-      />
-      <div className="card place-items-left grid h-full px-6 py-4 lg:h-40 ">
-        <div className="mb-2 text-left text-xl font-semibold ">{title}</div>
-        <p className="w-full text-base text-gray-200">{description}</p>
-      </div>
-    </div>
-  </Link>
-);
-
-const Home: NextPage = () => {
+export default function HomePage() {
   const { ref } = useScramble({
     text: "Saksham Kushwaha",
     speed: 0.5,
@@ -85,20 +64,20 @@ const Home: NextPage = () => {
 
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex min-h-screen flex-col items-center justify-center bg-background p-5 text-text">
-        <div className="container flex w-full flex-col gap-5  px-2 py-8 lg:w-3/4">
-          <p className="inline text-3xl  tracking-tight text-white">
+      <main className="bg-background text-text flex min-h-screen flex-col items-center justify-center p-5">
+        <div className="container flex w-full flex-col gap-5 px-2 py-8 lg:w-3/4">
+          <p className="inline text-3xl tracking-tight text-white">
             Hi, I&apos;m{" "}
-            <span className="inline font-bold text-accent ">
+            <span className="text-accent inline font-bold">
               <p ref={ref} />
             </span>
           </p>
-          <p className="text-lg font-medium leading-relaxed tracking-tighter text-text">
+          <p className="text-text text-lg font-medium leading-relaxed tracking-tighter">
             I&apos;m a 19-year-old developer specializing in{" "}
-            <span className=" text-accent">Python</span>,{" "}
-            <span className=" text-accent">TypeScript</span>,{" "}
-            <span className=" text-accent">JavaScript</span>, and{" "}
-            <span className=" text-accent">C++</span>, with a passion for
+            <span className="text-accent">Python</span>,{" "}
+            <span className="text-accent">TypeScript</span>,{" "}
+            <span className="text-accent">JavaScript</span>, and{" "}
+            <span className="text-accent">C++</span>, with a passion for
             creating innovative web applications. I began my programming journey
             in <span className="text-accent">2018</span> and have honed my
             skills through impactful open-source projects, including
@@ -110,9 +89,9 @@ const Home: NextPage = () => {
             inspiration for my projects.
           </p>
 
-          <p className="text-2xl font-semibold  text-white">
+          <p className="text-2xl font-semibold text-white">
             {" "}
-            <span className="text-3xl font-bold text-accent"> </span>
+            <span className="text-accent text-3xl font-bold"> </span>
             Projects
           </p>
 
@@ -121,12 +100,12 @@ const Home: NextPage = () => {
               <ProjectCard {...project} key={index} />
             ))}
           </div>
-          <p className="text-2xl font-semibold  text-white">
+          <p className="text-2xl font-semibold text-white">
             <span className="text-accent">* </span>Tech Stack
           </p>
 
-          <div className="mb-10 grid   grid-cols-3 gap-2 md:flex md:flex-wrap">
-            <div className="group flex h-fit w-fit items-center rounded-lg bg-gradient-to-t  from-yellow-300/40  from-5% to-gray-800  to-100% p-2">
+          <div className="mb-10 grid grid-cols-3 gap-2 md:flex md:flex-wrap">
+            <div className="group flex h-fit w-fit items-center rounded-lg bg-gradient-to-t from-yellow-300/40 from-5% to-gray-800 to-100% p-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="4em"
@@ -169,7 +148,7 @@ const Home: NextPage = () => {
                 ></path>
               </svg>
             </div>
-            <div className="flex h-fit w-fit items-center rounded-lg bg-gradient-to-t  from-blue-700/40  from-5% to-gray-800  to-100% p-2">
+            <div className="flex h-fit w-fit items-center rounded-lg bg-gradient-to-t from-blue-700/40 from-5% to-gray-800 to-100% p-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="4em"
@@ -198,7 +177,7 @@ const Home: NextPage = () => {
                 ></path>
               </svg>
             </div>
-            <div className="flex h-fit w-fit items-center rounded-lg bg-gradient-to-t  from-blue-800/40  from-5% to-gray-800  to-100% p-2">
+            <div className="flex h-fit w-fit items-center rounded-lg bg-gradient-to-t from-blue-800/40 from-5% to-gray-800 to-100% p-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="4em"
@@ -221,7 +200,7 @@ const Home: NextPage = () => {
               </svg>
             </div>
 
-            <div className=" flex h-fit w-fit items-center rounded-lg bg-gradient-to-t  from-yellow-500/40  from-5% to-gray-800  to-100% p-2">
+            <div className="flex h-fit w-fit items-center rounded-lg bg-gradient-to-t from-yellow-500/40 from-5% to-gray-800 to-100% p-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="4em"
@@ -233,7 +212,7 @@ const Home: NextPage = () => {
               </svg>
             </div>
 
-            <div className="flex h-fit w-fit items-center rounded-lg bg-gradient-to-t  from-sky-500/40  from-5% to-gray-800  to-100% p-2">
+            <div className="flex h-fit w-fit items-center rounded-lg bg-gradient-to-t from-sky-500/40 from-5% to-gray-800 to-100% p-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="4em"
@@ -256,7 +235,7 @@ const Home: NextPage = () => {
               </svg>
             </div>
 
-            <div className="flex h-fit w-fit items-center rounded-lg bg-gradient-to-t  from-gray-800/40  from-5% to-gray-800  to-100% p-2">
+            <div className="flex h-fit w-fit items-center rounded-lg bg-gradient-to-t from-gray-800/40 from-5% to-gray-800 to-100% p-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="4em"
@@ -267,7 +246,7 @@ const Home: NextPage = () => {
               </svg>
             </div>
 
-            <div className="flex h-fit w-fit items-center rounded-lg bg-gradient-to-t  from-teal-500/40  from-5% to-gray-800  to-100% p-2">
+            <div className="flex h-fit w-fit items-center rounded-lg bg-gradient-to-t from-teal-500/40 from-5% to-gray-800 to-100% p-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="4em"
@@ -281,7 +260,7 @@ const Home: NextPage = () => {
               </svg>
             </div>
 
-            <div className="flex h-fit w-fit items-center rounded-lg bg-gradient-to-t  from-green-500/40  from-5% to-gray-800  to-100% p-2">
+            <div className="flex h-fit w-fit items-center rounded-lg bg-gradient-to-t from-green-500/40 from-5% to-gray-800 to-100% p-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="4em"
@@ -350,7 +329,7 @@ const Home: NextPage = () => {
               </svg>
             </div>
 
-            <div className="flex h-fit w-fit items-center rounded-lg bg-gradient-to-t  from-blue-500/40  from-5% to-gray-800  to-100% p-2">
+            <div className="flex h-fit w-fit items-center rounded-lg bg-gradient-to-t from-blue-500/40 from-5% to-gray-800 to-100% p-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="4em"
@@ -373,7 +352,7 @@ const Home: NextPage = () => {
               </svg>
             </div>
 
-            <div className="group relative flex h-fit w-fit items-center rounded-lg bg-gradient-to-t  from-orange-500/40  from-5% to-gray-800  to-100% p-2">
+            <div className="group relative flex h-fit w-fit items-center rounded-lg bg-gradient-to-t from-orange-500/40 from-5% to-gray-800 to-100% p-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="4em"
@@ -389,12 +368,12 @@ const Home: NextPage = () => {
                   d="m12.158 5.067l3.22 3.22a2.141 2.141 0 0 1 2.712 2.73l3.1 3.1a2.143 2.143 0 1 1-1.285 1.21l-2.895-2.895v7.617a2.141 2.141 0 1 1-1.764-.062V12.3a2.146 2.146 0 0 1-1.165-2.814l-3.17-3.172"
                 ></path>
               </svg>
-              <div className="pointer-events-none absolute  -top-2 left-1/2 w-full -translate-x-1/2 -translate-y-full transform rounded bg-black px-2 py-1.5 text-center text-xs  text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+              <div className="pointer-events-none absolute -top-2 left-1/2 w-full -translate-x-1/2 -translate-y-full transform rounded bg-black px-2 py-1.5 text-center text-xs text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                 Git
               </div>
             </div>
 
-            <div className="flex h-fit w-fit items-center rounded-lg bg-gradient-to-t  from-teal-600/40  from-5% to-gray-800  to-100% p-2">
+            <div className="flex h-fit w-fit items-center rounded-lg bg-gradient-to-t from-teal-600/40 from-5% to-gray-800 to-100% p-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="4em"
@@ -408,7 +387,7 @@ const Home: NextPage = () => {
               </svg>
             </div>
 
-            <div className="flex h-fit w-fit items-center rounded-lg bg-gradient-to-t  from-green-300/40  from-5% to-gray-800  to-100% p-2">
+            <div className="flex h-fit w-fit items-center rounded-lg bg-gradient-to-t from-green-300/40 from-5% to-gray-800 to-100% p-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="4em"
@@ -459,7 +438,7 @@ const Home: NextPage = () => {
               </svg>
             </div>
 
-            <div className="flex h-fit w-fit items-center rounded-lg bg-gradient-to-t  from-gray-300/40  from-5% to-gray-800  to-100% p-2 ">
+            <div className="flex h-fit w-fit items-center rounded-lg bg-gradient-to-t from-gray-300/40 from-5% to-gray-800 to-100% p-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="4em"
@@ -474,7 +453,7 @@ const Home: NextPage = () => {
               </svg>
             </div>
 
-            <div className="flex h-fit w-fit items-center rounded-lg bg-gradient-to-t  from-green-600/50  from-5% to-gray-800  to-100% p-2">
+            <div className="flex h-fit w-fit items-center rounded-lg bg-gradient-to-t from-green-600/50 from-5% to-gray-800 to-100% p-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="4em"
@@ -504,7 +483,7 @@ const Home: NextPage = () => {
               </svg>
             </div>
 
-            <div className="flex h-fit w-fit items-center rounded-lg bg-gradient-to-t  from-orange-700/40  from-5% to-gray-800  to-100% p-2">
+            <div className="flex h-fit w-fit items-center rounded-lg bg-gradient-to-t from-orange-700/40 from-5% to-gray-800 to-100% p-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="4em"
@@ -530,7 +509,7 @@ const Home: NextPage = () => {
               </svg>
             </div>
 
-            <div className="flex h-fit w-fit items-center rounded-lg bg-gradient-to-t  from-blue-500/40  from-5% to-gray-800  to-100% p-2">
+            <div className="flex h-fit w-fit items-center rounded-lg bg-gradient-to-t from-blue-500/40 from-5% to-gray-800 to-100% p-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="4em"
@@ -566,14 +545,14 @@ const Home: NextPage = () => {
           </div>
 
           <hr className="bg-gray-400"></hr>
-          <div className="flex  items-start justify-between gap-2">
+          <div className="flex items-start justify-between gap-2">
             <div className="">
-              <p className="left-0 text-xl font-semibold  text-gray-400">
+              <p className="left-0 text-xl font-semibold text-gray-400">
                 Socials
               </p>
             </div>
 
-            <div className="flex gap-2   ">
+            <div className="flex gap-2">
               <Link href="https://twitter.com/LiReNa00" target="_blank">
                 <div className="card2 flex w-fit p-2">
                   <svg
@@ -690,6 +669,4 @@ const Home: NextPage = () => {
       </main>
     </>
   );
-};
-
-export default Home;
+}
