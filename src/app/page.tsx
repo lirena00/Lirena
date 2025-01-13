@@ -7,6 +7,7 @@ import { projects } from "~/utils/project";
 import { useScramble } from "use-scramble";
 import { ArrowUpRight, Plus } from "lucide-react";
 import { text } from "stream/consumers";
+import { Metadata } from "next";
 import { string } from "zod";
 
 interface Project {
@@ -23,7 +24,7 @@ const ProjectCard: React.FC<Project> = ({
   description,
 }) => (
   <Link href={href} target="_blank">
-    <div className="border-text/50 group relative z-20 h-full border transition-all duration-300 hover:scale-105">
+    <div className="group relative z-20 h-full border border-text/50 transition-all duration-300 hover:scale-105">
       <img
         className="absolute inset-0 h-full w-full object-cover opacity-80 transition-transform duration-300"
         src={imageSrc}
@@ -33,16 +34,23 @@ const ProjectCard: React.FC<Project> = ({
       <div className="absolute inset-0 overflow-hidden bg-black/50 backdrop-blur-3xl" />
 
       <div className="relative z-10 flex h-full flex-col p-4 lg:h-40">
-        <div className="text-accent mb-2 text-left text-xl font-semibold">
+        <div className="mb-2 text-left text-xl font-semibold text-accent">
           {title}
         </div>
         <p className="w-full text-base text-gray-300">{description}</p>
       </div>
 
-      <Plus className="text-accent absolute bottom-0 right-0 h-7 w-7 translate-x-1/2 translate-y-1/2" />
+      <Plus className="absolute bottom-0 right-0 h-7 w-7 translate-x-1/2 translate-y-1/2 text-accent" />
     </div>
   </Link>
 );
+
+export const metadata: Metadata = {
+  title: "Saksham Kushwaha | lirena00 | Portfolio",
+  description:
+    "Saksham Kushwaha (lirena00), a 19-year-old CS undergrad, is a full-stack developer, programmer, and artist passionate about AI, web development, and creative storytelling. A weeb at heart, I enjoy reading manga, watching anime, and working on my own post-apocalyptic story, soon to be published. Explore projects like Odash, Animood, open-source contributions, and unique anime-inspired tools.",
+  icons: [{ rel: "icon", url: "/favicon.ico" }],
+};
 
 export default function HomePage() {
   const { ref } = useScramble({
@@ -55,24 +63,15 @@ export default function HomePage() {
   });
   return (
     <>
-      <Head>
-        <title>Saksham Kushwaha | lirena00 | Portfolio</title>
-        <meta
-          name="description"
-          content="Saksham Kushwaha (lirena00), a 19-year-old CS undergrad, is a full-stack developer, programmer, and artist passionate about AI, web development, and creative storytelling. A weeb at heart, I enjoy reading manga, watching anime, and working on my own post-apocalyptic story, soon to be published. Explore projects like Odash, Animood, open-source contributions, and unique anime-inspired tools."
-        />
-
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <main className="bg-background text-text flex min-h-screen flex-col items-center justify-center p-5">
+      <main className="flex min-h-screen flex-col items-center justify-center bg-background p-5 text-text">
         <div className="container flex w-full flex-col gap-5 px-2 py-8 lg:w-3/4">
           <p className="inline text-3xl tracking-tight text-white">
             Hi, I&apos;m{" "}
-            <span className="text-accent inline font-bold">
+            <span className="inline font-bold text-accent">
               <p ref={ref} />
             </span>
           </p>
-          <p className="text-text text-lg font-medium leading-relaxed tracking-tighter">
+          <p className="text-lg font-medium leading-relaxed tracking-tighter text-text">
             I&apos;m a 19-year-old developer specializing in{" "}
             <span className="text-accent">Python</span>,{" "}
             <span className="text-accent">TypeScript</span>,{" "}
@@ -91,7 +90,7 @@ export default function HomePage() {
 
           <p className="text-2xl font-semibold text-white">
             {" "}
-            <span className="text-accent text-3xl font-bold"> </span>
+            <span className="text-3xl font-bold text-accent"> </span>
             Projects
           </p>
 
