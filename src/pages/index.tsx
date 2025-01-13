@@ -21,16 +21,23 @@ const ProjectCard: React.FC<Project> = ({
   description,
 }) => (
   <Link href={href} target="_blank">
-    <div className="group relative z-20 h-full border border-accent/50 transition-all duration-300 hover:scale-105">
-      {/* Adjusted position for the arrow */}
-      <Plus className="absolute left-0 top-0 h-5 w-5 -translate-x-1/2 -translate-y-1/2 text-accent" />
-      <Plus className="absolute bottom-0 right-0 h-5 w-5 translate-x-1/2 translate-y-1/2 text-accent" />
-      <div className="place-items-left grid h-full px-6 py-4 lg:h-40">
+    <div className="group relative z-20 h-full border border-text/50 transition-all duration-300 hover:scale-105">
+      <img
+        className="absolute inset-0 h-full w-full object-cover opacity-80 transition-transform duration-300 "
+        src={imageSrc}
+        alt="Project Banner"
+      />
+
+      <div className="absolute inset-0 overflow-hidden bg-black/50 backdrop-blur-3xl" />
+
+      <div className="relative z-10 flex h-full flex-col p-4 lg:h-40">
         <div className="mb-2 text-left text-xl font-semibold text-accent">
           {title}
         </div>
-        <p className="w-full text-base">{description}</p>
+        <p className="w-full text-base text-gray-300">{description}</p>
       </div>
+
+      <Plus className="absolute bottom-0 right-0 h-7 w-7 translate-x-1/2 translate-y-1/2 text-accent" />
     </div>
   </Link>
 );
@@ -62,7 +69,7 @@ const Home: NextPage = () => {
   const { ref } = useScramble({
     text: "Saksham Kushwaha",
     speed: 0.5,
-    tick: 1,
+    tick: 2,
     step: 1,
     scramble: 5,
     seed: 3,
@@ -105,7 +112,8 @@ const Home: NextPage = () => {
 
           <p className="text-2xl font-semibold  text-white">
             {" "}
-            <span className="text-accent">* </span>Projects
+            <span className="text-3xl font-bold text-accent"> </span>
+            Projects
           </p>
 
           <div className="grid grid-cols-1 items-center justify-center gap-4 sm:grid-cols-2">
