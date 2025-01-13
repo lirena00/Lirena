@@ -1,15 +1,10 @@
 "use client";
-import { type NextPage } from "next";
+
 import Head from "next/head";
 import Link from "next/link";
-import Image from "next/image";
 import { projects } from "~/utils/project";
 import { useScramble } from "use-scramble";
 import { ArrowUpRight, Plus } from "lucide-react";
-import { text } from "stream/consumers";
-import { Metadata } from "next";
-import { string } from "zod";
-
 interface Project {
   href: string;
   imageSrc: string;
@@ -45,13 +40,6 @@ const ProjectCard: React.FC<Project> = ({
   </Link>
 );
 
-export const metadata: Metadata = {
-  title: "Saksham Kushwaha | lirena00 | Portfolio",
-  description:
-    "Saksham Kushwaha (lirena00), a 19-year-old CS undergrad, is a full-stack developer, programmer, and artist passionate about AI, web development, and creative storytelling. A weeb at heart, I enjoy reading manga, watching anime, and working on my own post-apocalyptic story, soon to be published. Explore projects like Odash, Animood, open-source contributions, and unique anime-inspired tools.",
-  icons: [{ rel: "icon", url: "/favicon.ico" }],
-};
-
 export default function HomePage() {
   const { ref } = useScramble({
     text: "Saksham Kushwaha",
@@ -63,6 +51,15 @@ export default function HomePage() {
   });
   return (
     <>
+      <Head>
+        <title>Saksham Kushwaha | lirena00 | Portfolio</title>
+        <meta
+          name="description"
+          content="Saksham Kushwaha (lirena00), a 19-year-old CS undergrad, is a full-stack developer, programmer, and artist passionate about AI, web development, and creative storytelling. A weeb at heart, I enjoy reading manga, watching anime, and working on my own post-apocalyptic story, soon to be published. Explore projects like Odash, Animood, open-source contributions, and unique anime-inspired tools."
+        />
+
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <main className="flex min-h-screen flex-col items-center justify-center bg-background p-5 text-text">
         <div className="container flex w-full flex-col gap-5 px-2 py-8 lg:w-3/4">
           <p className="inline text-3xl tracking-tight text-white">
