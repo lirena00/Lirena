@@ -8,6 +8,10 @@ export const metadata: Metadata = {
   description:
     "Saksham Kushwaha (lirena00), a 19-year-old CS undergrad, is a full-stack developer, programmer, and artist passionate about AI, web development, and creative storytelling. A weeb at heart, I enjoy reading manga, watching anime, and working on my own post-apocalyptic story, soon to be published. Explore projects like Odash, Animood, open-source contributions, and unique anime-inspired tools.",
   icons: [{ rel: "icon", url: "/favicon.jpg" }],
+  openGraph: {
+    title: "Saksham Kushwaha | lirena00",
+    images: [{ url: "/og.jpg" }],
+  },
 };
 
 export default function RootLayout({
